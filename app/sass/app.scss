@@ -1,0 +1,66 @@
+@import 'reset';
+@import 'layout';
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+
+//Base rules
+$font-stack: Helvetica,
+sans-serif;
+$primary-color: #333;
+$bg-color: white;
+
+html {
+    font-size: 62.5%;
+}
+body,
+form {
+    font: 100% $font-stack;
+    @include font-size(1.6);
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+    background-color: $bg-color;
+}
+
+a {
+    color: #039;
+}
+
+a:hover {
+    color: #03F;
+}
+
+//Module and state rules
+.input {
+    margin-bottom: 15px;
+}
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+input {
+    height: 45px;
+    display: block;
+}
+.button {
+    background-color: green;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    width: 100%;
+    padding: 20px;
+    @include font-size(1.8);
+    color: white;
+    @include border-radius(4px);
+    text-decoration: none;
+    
+}

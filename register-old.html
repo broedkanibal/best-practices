@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="app/stylesheets/app.css">
+    <script src="app/js/main.js"></script>
+
+    <title>Best practices</title>
+</head>
+
+<body>
+    <form autocomplete="on">
+        <h1>Register account</h1>
+        <p>Please fill in the details</p>
+        <fieldset>
+            <h2>Account details</h2>
+
+            <div class="input">
+                <label for="email">*Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input">
+                <label for="pwd">*Password</label>
+                <input type="password" name="pwd" required>
+            </div>
+            <div class="input">
+                <label for="pwdrepeat">*Repeat password</label>
+                <input type="password" name="pwdrepeat" required>
+            </div>
+            <p>Password must containt at least 8 characters.</p>
+        </fieldset>
+        <fieldset>
+            <h2>Personal details</h2>
+            <div class="input">
+                <select required>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="fname">*First name</label>
+                <input type="text" name="fname" required>
+            </div>
+            <div class="input">
+                <label for="lname">*Last name</label>
+                <input type="text" name="lname" required>
+            </div>
+            <div class="input">
+                <label for="address">Address</label>
+                <input type="text" name="address">
+            </div>
+            <div class="input">
+                <label for="pcode">Post code</label>
+                <input type="text" name="pcode">
+            </div>
+            <div class="input">
+                <label for="city">City</label>
+                <input type="text" name="city">
+            </div>
+
+            <div class="input">
+                <label for="country">Country</label>
+                <input type="text" list="countries" name="country" />
+                <datalist id="countries">
+                    <option value="Germany">Germany</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                </datalist>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
