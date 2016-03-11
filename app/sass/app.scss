@@ -1,58 +1,78 @@
 @import 'reset';
-@import 'layout';
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    border-radius: $radius;
-}
-
-@mixin font-size($sizeValue: 1.6) {
-    font-size: ($sizeValue * 10) + px;
-    font-size: $sizeValue + rem;
-}
-
+@import 'grid';
+@import 'variables';
+@import 'mixins-extensions';
 //Base rules
-$font-stack: Helvetica,
-sans-serif;
-$primary-color: #333;
-$bg-color: white;
-
-html {
-    font-size: 62.5%;
-}
-body,
-form {
+body {
     font: 100% $font-stack;
-    @include font-size(1.6);
     color: $primary-color;
     margin: 0;
     padding: 0;
     background-color: $bg-color;
+    font-size: 1em; //16px
+    line-height: 1.25; //20px
 }
 
 a {
-    color: #039;
+    color: $link-color;
 }
 
 a:hover {
-    color: #03F;
+    color: $link-hover;
 }
 
-//Module and state rules
+
+/*
+General layout rules
+*/
+
+h1 {
+    font-size: 2em; //32px
+    line-height: 1.25; //45px/36px
+}
+
+h2 {
+    font-size: 1.625em; //26px
+    line-height: 1.15384615; //30px/26px
+}
+
+h3 {
+    font-size: 1.5em; //24px;
+    line-height: 1.25; //25px/22px
+}
+
+footer {
+    background-color: $footer-bg;
+    color: white;
+}
+
+//Module rules
+.landing {
+    background-image: url(/app/images/council-tax-bill2.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
 .input {
     margin-bottom: 15px;
 }
+
 label {
     margin-bottom: 5px;
     display: block;
 }
+
 input {
+    padding: 10px;
     height: 45px;
+    width: 100%;
     display: block;
+    @include font-size(1.6);
 }
-.button {
+
+.button, a.button {
     background-color: green;
+    display: block;
     border: 0;
     outline: 0;
     box-shadow: none;
@@ -62,5 +82,15 @@ input {
     color: white;
     @include border-radius(4px);
     text-decoration: none;
-    
+}
+
+.slider {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+//State rules
+.main-nav {
+    display: none;
+    color: red;
 }

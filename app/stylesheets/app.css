@@ -46,24 +46,16 @@ table {
   border-spacing: 0; }
 
 /*
-Mixins, and imports
+Base colors
 */
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.clearfix:after, .grid:after {
-  content: "";
-  display: table;
-  clear: both; }
-
+/*
+Layout colors
+*/
 /*
 Grid
 */
 .grid {
-  background: white;
-  margin: 0 0 20px 0; }
+  margin: 0 0 0 0; }
 
 [class*='col-'] {
   float: left;
@@ -92,32 +84,62 @@ Grid
     padding-right: 15px; }
 
 /*
-Layout rules
+Base colors
 */
-header,
-main,
-footer {
-  width: 100%;
-  margin: 0 10px auto; }
+/*
+Layout colors
+*/
+    /*
+Mixins, and imports
+*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-html {
-  font-size: 62.5%; }
+.clearfix:after, .grid:after {
+  content: "";
+  display: table;
+  clear: both; }
 
-body,
-form {
+body {
   font: 100% Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
   color: #333;
   margin: 0;
   padding: 0;
-  background-color: white; }
+  background-color: white;
+  font-size: 1em;
+  line-height: 1.25; }
 
 a {
   color: #039; }
 
 a:hover {
   color: #03F; }
+
+/*
+General layout rules
+*/
+h1 {
+  font-size: 2em;
+  line-height: 1.25; }
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615; }
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.25; }
+
+footer {
+  background-color: #6E6E6E;
+  color: white; }
+
+.landing {
+  background-image: url(/app/images/council-tax-bill2.jpg);
+  background-size: cover;
+  height: 500px; }
 
 .input {
   margin-bottom: 15px; }
@@ -127,11 +149,16 @@ label {
   display: block; }
 
 input {
+  padding: 10px;
   height: 45px;
-  display: block; }
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  font-size: 1.6rem; }
 
-.button {
+.button, a.button {
   background-color: green;
+  display: block;
   border: 0;
   outline: 0;
   box-shadow: none;
@@ -145,5 +172,13 @@ input {
   -ms-border-radius: 4px;
   border-radius: 4px;
   text-decoration: none; }
+
+.slider {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white; }
+
+.main-nav {
+  display: none;
+  color: red; }
 
 /*# sourceMappingURL=app.css.map */
